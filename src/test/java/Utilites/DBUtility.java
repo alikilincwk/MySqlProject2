@@ -58,6 +58,16 @@ public class DBUtility {
     }
 
 
+    public static void getListMethod(String query) {
+        List<List<String>> table = DBUtility.getListData(query);
+        for (List<String> row : table) {
+            for (String cell : row)
+                System.out.print(cell + "\t");
+
+            System.out.println();
+        }
+
+    }
 
 
 
